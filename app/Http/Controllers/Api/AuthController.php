@@ -25,6 +25,10 @@ class AuthController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required',
+            'jenis_kelamin' => 'required',
+            'tanggal_lahir' => 'required',
+            'telepon' => 'required',
+            'alamat' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -38,6 +42,10 @@ class AuthController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
+        $user->jenis_kelamin = $request->jenis_kelamin;
+        $user->tanggal_lahir = $request->tanggal_lahir;
+        $user->telepon = $request->telepon;
+        $user->alamat = $request->alamat;
 
         $user->save();
 
