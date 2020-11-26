@@ -14,7 +14,7 @@ class AddNewAttrToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('jenis_kelamin', 1);
+            $table->string('jenis_kelamin');
             $table->date('tanggal_lahir');
             $table->string('telepon', 15);
             $table->string('alamat');
