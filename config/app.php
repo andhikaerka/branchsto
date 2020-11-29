@@ -179,7 +179,7 @@ return [
          * Custom Plugin
          */
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
-        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
 
     ],
 
