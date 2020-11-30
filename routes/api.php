@@ -30,22 +30,16 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
 
 // Stable API
-Route::name('stable')->group(function () {
-    Route::post('stable', [StableController::class, 'store']);
-    Route::put('/{stable}', [StableController::class, 'update']);
-    Route::delete('/{stable}', [StableController::class, 'destroy']);
-});
+Route::post('stable', [StableController::class, 'store']);
+Route::put('stable/{stable}', [StableController::class, 'update']);
+Route::delete('stable/{stable}', [StableController::class, 'destroy']);
 
 // Club API
-Route::name('club')->group(function () {
-    Route::post('store', [ClubController::class, 'store']);
-    Route::put('/{club}', [ClubController::class, 'update']);
-    Route::delete('/{club}', [ClubController::class, 'destroy']);
-});
+Route::post('club', [ClubController::class, 'store']);
+Route::put('club/{club}', [ClubController::class, 'update']);
+Route::delete('club/{club}', [ClubController::class, 'destroy']);
 
 // Horse API
-Route::name('horse')->group(function () {
-    Route::post('/store', [HorseController::class, 'store']);
-    Route::put('/{horse}', [HorseController::class, 'update']);
-    Route::delete('/{horse}', [HorseController::class, 'destroy']);
-});
+Route::post('horse', [HorseController::class, 'store']);
+Route::put('horse/{horse}', [HorseController::class, 'update']);
+Route::delete('horse/{horse}', [HorseController::class, 'destroy']);
